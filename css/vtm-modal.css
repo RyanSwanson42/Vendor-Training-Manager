@@ -1,0 +1,93 @@
+#vmbtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vm-mc {
+    margin: auto;
+    top: 15px;
+    min-height: 80vh;
+    /* max-height: 80vh; */
+    border: 1px solid #888;
+    width: 90%;
+}
+
+.vm-col {
+    /* border-style: solid;
+    border-color: black;
+    border-width: 1px; */
+    padding: .1rem;
+}
+
+/* .btn-block {
+    width: 100%;
+} */
+
+.vm-mh {
+    max-height: 30vh;
+    padding: .4rem;
+    margin-bottom: 15px;
+}
+
+.vm-mb {
+    overflow: auto;
+}
+
+
+.pg1 {
+    border-style: solid;
+    border-color: #3c8dbc;
+    border-width: 2px;
+    max-width: 80vw;
+    min-height: 57vh;
+    display: block;
+    margin: auto;
+}
+
+.pg2 {
+    border-style: solid;
+    border-color: #3c8dbc;
+    border-width: 2px;
+    max-width: 110vh;
+    display: none;
+    margin: auto;
+}
+
+.pg3 {
+    border-style: solid;
+    border-color: #3c8dbc;
+    border-width: 2px;
+    display: none;
+}
+
+.pg4 {
+    border-style: solid;
+    border-color: #3c8dbc;
+    border-width: 2px;
+    display: none;
+}
+
+.vm-panel-collapse {
+    position: absolute;
+}
+
+.vm-list-group {
+    position: absolute;
+    z-index: 2;
+    height: 160px;
+    width: 260px;
+}
+
+.vm-list-group-item {
+    font-size: small;
+}
+
+.addv-form {
+    margin: auto;
+}
+
+#submit-btn {
+    margin: auto;
+    text-align: center;
+}

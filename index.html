@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Vendor TRM Team">
+
+  <title>Vendor TRM</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom JS -->
+
+
+  <!-- FontAwesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Custom styles-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/vtm-modal.css" rel="stylesheet">
+
+</head>
+
+<body style="padding-top: 70px">
+
+  <!-- Navigation -->
+  <nav class="main-header navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #3c8dbc">
+    <div class="container">
+      <img src="img/AtosSyntelLogoMedWhite.png" height="30" />
+      <a class="navbar-brand" href="#">
+        <!--<b>Atos</b>Syntel--> <i>Vendor<b>TRM</b></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <!-- Dashboard (HOME BUTTON) (Active Item)
+            ----commented because single page app
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Dashboard
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          -->
+          <li class="nav-item py-1" style="padding-right: 5px">
+            <input type="search" id="sb"
+              style="color:white; border-radius: 15px; border:#fff 2px solid; background-color:#3c8dbc; padding-top: 2px; padding-bottom: 3px"
+              required placeholder="  Filter..." />
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Run Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal"
+              data-backdrop="static">Vendor Management</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user-circle"></i>
+              Mahesh
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <span class="dropdown-item">Welcome, SPOC</span>
+              <span class="dropdown-item">Your Vertical: Logistics</span>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="http://google.com"><b style="color:tomato">Logout</b></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <span style="float: right; margin-top: -10px; margin-bottom: 10px; color: #3c8dbc;">Toggle In Progress:
+      <button type="button" class="btn btn-link " id="hidebutton"><i id="itog"
+          class="fas fa-toggle-on fa-2x"></i></button>
+    </span><br><br>
+    <div class="row text-left">
+      <div class="col-md-3" style="border: 10px solid #FFFF66; border-style: none none none solid;">
+        <h4>New</h4><button type="button" class="btn btn-outline-warning " id="bpbutton"
+          style="float: right; position: relative; top: -40px; margin-right: 10px;">to Processing</button>
+        <div class="card" style="width: 13rem; margin-left: 10px; margin-top: 20px; " id="p1">
+          <div class="cardcontainer">
+            <input type="checkbox" class="form-check-input" id="check1">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100558</h6>
+              <p class="card-text">Quick sample text to create the Vendor Request and make up the body of the request's
+                content.</p>
+
+            </div>
+            <div id="overlay1" class="overlay">
+              <div class="cardtext">
+                Data from Database<br>
+                More Data from Database<br>
+                More Data from Database<br>
+                More Data from Database<br>
+                More Data from Database<br>
+                More Data from Database<br>
+                More Data from Database
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width: 13rem; margin-left: 10px; margin-top: 20px;" id="p2">
+          <input type="checkbox" class="form-check-input" id="check2">
+          <div class="cardcontainer">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100559</h6>
+              <p class="card-text">Quick sample text to create another Vendor Request and make up the body of the
+                request's content.</p>
+              <!--<a href="#" class="card-button">Process</a>-->
+            </div>
+            <div id="overlay2" class="overlay">
+              <div class="cardtext">
+                Data from Database<br>
+                More Data from Database<br>
+                More Data from Database<br>
+                More Data from Database<br>
+                More Data from Database<br>
+                More Data from Database<br>
+                More Data from Database
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="processing-col" class="col" style="border: 10px solid #FFC04C;  border-style: none none none solid;"
+        id="pd">
+        <h4>Processing</h4>
+        <div class="row" id="hp">
+          <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100560</h6>
+              <p class="card-text">Big Data Training</p>
+
+              <!-- Yosuf ElSaadany 3/14/2019 1:47 pm Integration of Modal- DOM for Modal -->
+              <button style="float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Open
+              </button>
+              <!-- The Modal -->
+              <div class="modal" id="myModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <div class="col-lg-4">
+                        <p>Training Request ID: 100558</p>
+                      </div>
+                      <div class="col-lg-4">
+                        <p>Project Manager:</p>
+                      </div>
+                      <div class="col-lg-2">
+                        <p>Training Type:</p>
+                      </div>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <div class="row">
+                        <!-- First Column -->
+                        <div class="col">
+                          <button id="btn" class="accordion">Section 1</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <button id="btn" class="accordion">Section 2</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <button id="btn" class="accordion">Section 3</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <button id="btn" class="accordion">Section 4</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <button id="btn" class="accordion">Section 5</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <br>
+                        </div>
+                        <!-- Second Column -->
+                        <div class="col">
+                          <div id="card" class="card">
+                            <div id="card-body" class="card-body">
+                              <h5 class="card-title">Progress</h5>
+                              <p class="card-text">Summary of the progress of this training request is shown below</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">Step 1 Completed
+                                <span id="completed" class="dot"></span>
+                              </li>
+                              <li class="list-group-item">Step 2 Completed
+                                <span id="completed" class="dot"></span>
+                              </li>
+                              <li class="list-group-item">Step 3 In Progress
+                                <span id="inprogressdot" class="dot"></span>
+                              </li>
+                              <li class="list-group-item">Step 4 Pending
+                                <span id="pending" class="dot"></span>
+                              </li>
+                              <li class="list-group-item">Step 5 Pending
+                                <span id="pending" class="dot"></span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button class="btn btn-primary">Save</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100561</h6>
+              <p class="card-text">Some sample text</p>
+              <!-- Yosuf ElSaadany 3/14/2019 1:47 pm Integration of Modal- DOM for Modal -->
+              <button style="float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Open
+              </button>
+              <!-- The Modal -->
+              <div class="modal" id="myModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <div class="col-lg-4">
+                        <p>Training Request ID: 100558</p>
+                      </div>
+                      <div class="col-lg-4">
+                        <p>Project Manager:</p>
+                      </div>
+                      <div class="col-lg-2">
+                        <p>Training Type:</p>
+                      </div>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <div class="row">
+                        <!-- First Column -->
+                        <div class="col">
+                          <button id="btn" class="accordion">Section 1</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <button id="btn" class="accordion">Section 2</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <button id="btn" class="accordion">Section 3</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <button id="btn" class="accordion">Section 4</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <button id="btn" class="accordion">Section 5</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi
+                              ut aliquip ex ea commodo consequat.
+                            </p>
+                          </div>
+                          <br>
+                        </div>
+                        <!-- Second Column -->
+                        <div class="col">
+                          <div id="card" class="card">
+                            <div id="card-body" class="card-body">
+                              <h5 class="card-title">Progress</h5>
+                              <p class="card-text">Summary of the progress of this training request is shown below</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">Step 1 Completed
+                                <span id="completed" class="dot"></span>
+                              </li>
+                              <li class="list-group-item">Step 2 Completed
+                                <span id="completed" class="dot"></span>
+                              </li>
+                              <li class="list-group-item">Step 3 In Progress
+                                <span id="inprogressdot" class="dot"></span>
+                              </li>
+                              <li class="list-group-item">Step 4 Pending
+                                <span id="pending" class="dot"></span>
+                              </li>
+                              <li class="list-group-item">Step 5 Pending
+                                <span id="pending" class="dot"></span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button class="btn btn-primary">Save</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100562</h6>
+              <p class="card-text">Quick sample text</p>
+            </div>
+          </div>
+          <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100563</h6>
+              <p class="card-text">Some other sample text</p>
+            </div>
+          </div>
+          <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100564</h6>
+              <p class="card-text">More sample text</p>
+            </div>
+          </div>
+          <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100565</h6>
+              <p class="card-text">Quick sample text</p>
+            </div>
+          </div>
+          <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100566</h6>
+              <p class="card-text">Quick sample text</p>
+            </div>
+          </div>
+          <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
+            <div class="card-body">
+              <h5 class="card-title">Vendor Request</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ID: 100567</h6>
+              <p class="card-text">Quick sample text</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="inprogress" class="col-md-3" style="border: 10px solid lightgreen;  border-style: none none none solid;">
+        <h4>In Progress</h4>
+        <div class="card" style="margin-top: 20px; width: 14rem;">
+          <div class="card-body">
+            <h5 class="card-title">Vendor Request</h5>
+            <h6 class="card-subtitle mb-2 text-muted">ID: 100570</h6>
+            <p class="card-text">Take attendence.</p>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Begin Ryan's Vendor Modal Code -->
+  <!-- 3/15/2019 -->
+
+
+  <!-- Begin VM Modal container-->
+  <div class="container">
+
+    <!-- The Modal -->
+    <div class="modal fade" id="vm-modal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content vm-mc">
+
+          <!-- Modal Header -->
+          <div class="modal-header vm-mh">
+            <!-- <h4 class="modal-title">Modal Heading</h4> -->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col vm-col"><button type="button" id="v-btn"
+                    class="btn btn-primary btn-block">Vendors</button></div>
+                <div class="col vm-col"><button type="button" id="av-btn" class="btn btn-primary btn-block">Add
+                    Vendor</button></div>
+                <div class="col vm-col"><button type="button" id="vt-btn" class="btn btn-primary btn-block">Vendor
+                    Trainers</button></div>
+                <div class="col vm-col"><button type="button" id="avt-btn" class="btn btn-primary btn-block">Add Vendor
+                    Trainer</button></div>
+
+                <div class="col vm-col"><button type="button" class="btn btn-danger btn-block" id="close-vtm-btn"
+                    data-dismiss="modal"><i class="fas fa-times" style="margin-right: 0.5vw;"></i>Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body vm-mb">
+
+            <!-- Begin Vendor Tab  -->
+            <div class="pg1">&nbsp;
+              <div class="container-fluid" id="vtlist">
+
+                <!-- Vendor List Row Begin -->
+                <div class="row">
+                  <div class="col"><button type="button" id="v-btn" class="btn btn-warning btn-block">Select</button>
+                  </div>
+                  <div class="col">
+                    <div class="panel-group">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse"
+                              href="#collapse1">Fedex</button>
+                          </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse vm-panel-collapse collapse">
+                          <ul class="list-group vm-list-group">
+                            <li class="list-group-item vm-list-group-item">Name: Fedex</li>
+                            <li class="list-group-item vm-list-group-item">Phone: 555-555-5555</li>
+                            <li class="list-group-item vm-list-group-item">Email: fedex@yahoo.com</li>
+                            <li class="list-group-item vm-list-group-item">City: Memphis</li>
+                            <li class="list-group-item vm-list-group-item">State: Tennessee</li>
+                            <li class="list-group-item vm-list-group-item">Country: USA</li>
+                            <li class="list-group-item vm-list-group-item">Zipcode: 37000</li>
+                            <li class="list-group-item vm-list-group-item">Time zone: GMT-5</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col"><button type="button" class="btn btn-danger btn-block">Delete</button></div>
+                </div>
+                <!-- Vendor List Row End -->
+
+                <!-- Vendor List Row Begin -->
+                <div class="row">
+                  <div class="col"><button type="button" id="v-btn" class="btn btn-warning btn-block">Select</button>
+                  </div>
+                  <div class="col">
+                    <div class="panel-group">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse"
+                              href="#collapse2">Fedex</button>
+                          </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse vm-panel-collapse collapse">
+                          <ul class="list-group vm-list-group">
+                            <li class="list-group-item vm-list-group-item">Name: Fedex</li>
+                            <li class="list-group-item vm-list-group-item">Phone: 555-555-5555</li>
+                            <li class="list-group-item vm-list-group-item">Email: fedex@yahoo.com</li>
+                            <li class="list-group-item vm-list-group-item">City: Memphis</li>
+                            <li class="list-group-item vm-list-group-item">State: Tennessee</li>
+                            <li class="list-group-item vm-list-group-item">Country: USA</li>
+                            <li class="list-group-item vm-list-group-item">Zipcode: 37000</li>
+                            <li class="list-group-item vm-list-group-item">Time zone: GMT-5</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col"><button type="button" class="btn btn-danger btn-block">Delete</button></div>
+                </div>
+                <!-- Vendor List Row End -->
+
+
+              </div>
+            </div>
+            <!-- End Vendor Tab  -->
+
+
+            <!-- Begin Add Vendor Tab -->
+            <div class="pg2">&nbsp;
+              <div class="container">
+                <h3>Add a New Vendor Account</h3>
+                <p>Fill out all pertinent information.</p>
+                <form id="va-form">
+                  <div class="form-group">
+                    <label>Vendor Name</label>
+                    <input type="text" class="form-control" id="nameForm" placeholder="Enter Vendor name">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Phone Number</label>
+                    <input type="text" class="form-control input-medium bfh-phone" id="phoneForm"
+                      data-format="+1 (ddd) ddd-dddd" placeholder="Enter Vendor phone number">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Email Address</label>
+                    <input type="email" class="form-control" id="emailForm" placeholder="Enter Vendor email">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor City</label>
+                    <input type="text" class="form-control" id="cityForm" placeholder="Enter Vendor City">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor State</label>
+                    <input type="text" class="form-control" id="stateForm" placeholder="Enter Vendor State">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Country</label>
+                    <input type="text" class="form-control" id="countryForm" placeholder="Enter Vendor Country">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Zipcode</label>
+                    <input type="number" class="form-control" id="zipForm" placeholder="Enter Vendor Zip">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Time Zone</label>
+                    <input type="text" class="form-control" id="timezoneForm" placeholder="Enter Vendor Time Zone">
+                  </div>
+                  <br>
+                </form>
+                <div style="text-align:center; margin-bottom: 2vh;">
+                  <button type="button" id="submit-btn" class="btn btn-success">Submit</button>
+                </div>
+              </div>
+            </div>
+            <!-- End Add Vendor Tab -->
+
+            <div class="pg3">&nbsp;
+              TODO:  A lot.
+            </div>
+            <div class="pg4">&nbsp;
+              TODO:  A lot.
+            </div>
+
+          </div>
+          <!-- Modal Body End -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Ryan's Vendor Modal Code-->
+
+
+
+
+  <!-- Footer -->
+  <footer class="py-0" style="background-color: #3c8dbc; width: 100%; bottom: 0; position: fixed;">
+    <div class="container">
+      <p class="m-0 text-left text-white" style="position: relative; top: 10px">Version 0.0.1</p>
+      <p class="m-0 text-right text-white" style="position: relative; top: -14px">Copyright 2019</b></p>
+    </div>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Local js scripts-->
+  <!-- <script src="js/accordion.js"></script>
+  <script src="js/movecols.js"></script> -->
+  <script src="js/vtm.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#hidebutton').click(
+        function () {
+          if ($('#inprogress').is(':visible')) {
+            $('#inprogress').hide();
+            $('processing-col').removeClass("col-md-4");
+            $('processing-col').addClass("col-5");
+            $('#itog').removeClass("fa-toggle-on");
+            $('#itog').addClass("fa-toggle-off");
+          } else {
+            $('#inprogress').show();
+            $('processing-col').removeClass("col-5");
+            $('processing-col').addClass("col-md-4");
+            $('#itog').removeClass("fa-toggle-off");
+            $('#itog').addClass("fa-toggle-on");
+          }
+        }
+      );
+
+      $('#bpbutton').click(function () {
+        if ($('#check1').is(':checked')) {
+          $('#check1').hide();
+          $('#overlay1').hide();
+          $("#p1").prependTo("#hp");
+        }
+        if ($('#check2').is(':checked')) {
+          $('#check2').hide();
+          $('#overlay2').hide();
+          $("#p2").prependTo("#hp");
+        }
+      })
+
+      $('#sb').change(function () {
+        $('.card').show();
+        var filter = $(this).val(); // get the value of the input, which we filter on
+        $('.container').find(".card-title:not(:contains(" + filter + "))").parent().css('display', 'none');
+
+      });
+
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
