@@ -85,6 +85,12 @@ Integration of Modal- Styling
   overflow-y: scroll;
 }
 
+/* Modal Title */
+.modal-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 /* Status Dots */
 .dot {
   float: right;
