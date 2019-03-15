@@ -10,15 +10,15 @@
   <title>Vendor TRM</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
 
   <!-- Custom JS -->
 
 
   <!-- FontAwesome-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
 
   <!-- Custom styles-->
   <link href="css/style.css" rel="stylesheet">
@@ -33,9 +33,13 @@
     <div class="container">
       <img src="img/AtosSyntelLogoMedWhite.png" height="30" />
       <a class="navbar-brand" href="#">
-        <!--<b>Atos</b>Syntel--> <i>Vendor<b>TRM</b></i></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <!--<b>Atos</b>Syntel-->
+        <i>Vendor
+          <b>TRM</b>
+        </i>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -49,20 +53,18 @@
           </li>
           -->
           <li class="nav-item py-1" style="padding-right: 5px">
-            <input type="search" id="sb"
-              style="color:white; border-radius: 15px; border:#fff 2px solid; background-color:#3c8dbc; padding-top: 2px; padding-bottom: 3px"
+            <input type="search" id="sb" style="color:white; border-radius: 15px; border:#fff 2px solid; background-color:#3c8dbc; padding-top: 2px; padding-bottom: 3px"
               required placeholder="  Filter..." />
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Run Report</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal"
-              data-backdrop="static">Vendor Management</a>
+            <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal" data-backdrop="static">Vendor Management</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               <i class="fas fa-user-circle"></i>
               Mahesh
             </a>
@@ -70,7 +72,9 @@
               <span class="dropdown-item">Welcome, SPOC</span>
               <span class="dropdown-item">Your Vertical: Logistics</span>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="http://google.com"><b style="color:tomato">Logout</b></a>
+              <a class="dropdown-item" href="http://google.com">
+                <b style="color:tomato">Logout</b>
+              </a>
             </div>
           </li>
         </ul>
@@ -81,32 +85,35 @@
   <!-- Page Content -->
   <div class="container">
     <span style="float: right; margin-top: -10px; margin-bottom: 10px; color: #3c8dbc;">Toggle In Progress:
-      <button type="button" class="btn btn-link " id="hidebutton"><i id="itog"
-          class="fas fa-toggle-on fa-2x"></i></button>
-    </span><br><br>
+      <button type="button" class="btn btn-link " id="hidebutton">
+        <i id="itog" class="fas fa-toggle-on fa-2x"></i>
+      </button>
+    </span>
+    <br>
+    <br>
     <div class="row text-left">
       <div class="col-md-3" style="border: 10px solid #FFFF66; border-style: none none none solid;">
-        <h4>New</h4><button type="button" class="btn btn-outline-warning " id="bpbutton"
-          style="float: right; position: relative; top: -40px; margin-right: 10px;">to Processing</button>
+        <h4>New</h4>
+        <button type="button" class="btn btn-outline-warning " id="bpbutton" style="float: right; position: relative; top: -40px; margin-right: 10px;">to Processing</button>
         <div class="card" style="width: 13rem; margin-left: 10px; margin-top: 20px; " id="p1">
           <div class="cardcontainer">
             <input type="checkbox" class="form-check-input" id="check1">
             <div class="card-body">
               <h5 class="card-title">Vendor Request</h5>
               <h6 class="card-subtitle mb-2 text-muted">ID: 100558</h6>
-              <p class="card-text">Quick sample text to create the Vendor Request and make up the body of the request's
-                content.</p>
+              <p class="card-text">Quick sample text to create the Vendor Request and make up the body of the request's content.
+              </p>
 
             </div>
             <div id="overlay1" class="overlay">
               <div class="cardtext">
-                Data from Database<br>
-                More Data from Database<br>
-                More Data from Database<br>
-                More Data from Database<br>
-                More Data from Database<br>
-                More Data from Database<br>
-                More Data from Database
+                Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
               </div>
             </div>
           </div>
@@ -118,26 +125,24 @@
             <div class="card-body">
               <h5 class="card-title">Vendor Request</h5>
               <h6 class="card-subtitle mb-2 text-muted">ID: 100559</h6>
-              <p class="card-text">Quick sample text to create another Vendor Request and make up the body of the
-                request's content.</p>
+              <p class="card-text">Quick sample text to create another Vendor Request and make up the body of the request's content.</p>
               <!--<a href="#" class="card-button">Process</a>-->
             </div>
             <div id="overlay2" class="overlay">
               <div class="cardtext">
-                Data from Database<br>
-                More Data from Database<br>
-                More Data from Database<br>
-                More Data from Database<br>
-                More Data from Database<br>
-                More Data from Database<br>
-                More Data from Database
+                Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
+                <br> More Data from Database
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="processing-col" class="col" style="border: 10px solid #FFC04C;  border-style: none none none solid;"
-        id="pd">
+      <div id="processing-col" class="col" style="border: 10px solid #FFC04C;  border-style: none none none solid;" id="pd">
         <h4>Processing</h4>
         <div class="row" id="hp">
           <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
@@ -172,49 +177,36 @@
                       <div class="row">
                         <!-- First Column -->
                         <div class="col">
-                          <button id="btn" class="accordion">Section 1</button>
+                          <button id="btn" class="accordion">Shortlist Vendor</button>
                           <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
-                            </p>
+                            <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal" data-backdrop="static">Vendor Management</a>
                           </div>
                           <button id="btn" class="accordion">Section 2</button>
                           <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi ut aliquip ex ea commodo consequat.
                             </p>
                           </div>
                           <button id="btn" class="accordion">Section 3</button>
                           <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi ut aliquip ex ea commodo consequat.
                             </p>
                           </div>
                           <button id="btn" class="accordion">Section 4</button>
                           <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi ut aliquip ex ea commodo consequat.
                             </p>
                           </div>
                           <button id="btn" class="accordion">Section 5</button>
                           <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi ut aliquip ex ea commodo consequat.
                             </p>
                           </div>
                           <br>
@@ -264,117 +256,6 @@
               <h5 class="card-title">Vendor Request</h5>
               <h6 class="card-subtitle mb-2 text-muted">ID: 100561</h6>
               <p class="card-text">Some sample text</p>
-              <!-- Yosuf ElSaadany 3/14/2019 1:47 pm Integration of Modal- DOM for Modal -->
-              <button style="float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                Open
-              </button>
-              <!-- The Modal -->
-              <div class="modal" id="myModal">
-                <div class="modal-dialog modal-xl">
-                  <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                      <div class="col-lg-4">
-                        <p>Training Request ID: 100558</p>
-                      </div>
-                      <div class="col-lg-4">
-                        <p>Project Manager:</p>
-                      </div>
-                      <div class="col-lg-2">
-                        <p>Training Type:</p>
-                      </div>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                      <div class="row">
-                        <!-- First Column -->
-                        <div class="col">
-                          <button id="btn" class="accordion">Section 1</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <button id="btn" class="accordion">Section 2</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <button id="btn" class="accordion">Section 3</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <button id="btn" class="accordion">Section 4</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <button id="btn" class="accordion">Section 5</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi
-                              ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <br>
-                        </div>
-                        <!-- Second Column -->
-                        <div class="col">
-                          <div id="card" class="card">
-                            <div id="card-body" class="card-body">
-                              <h5 class="card-title">Progress</h5>
-                              <p class="card-text">Summary of the progress of this training request is shown below</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Step 1 Completed
-                                <span id="completed" class="dot"></span>
-                              </li>
-                              <li class="list-group-item">Step 2 Completed
-                                <span id="completed" class="dot"></span>
-                              </li>
-                              <li class="list-group-item">Step 3 In Progress
-                                <span id="inprogressdot" class="dot"></span>
-                              </li>
-                              <li class="list-group-item">Step 4 Pending
-                                <span id="pending" class="dot"></span>
-                              </li>
-                              <li class="list-group-item">Step 5 Pending
-                                <span id="pending" class="dot"></span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                      <button class="btn btn-danger" data-dismiss="modal">Close</button>
-                      <button class="btn btn-primary">Save</button>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
@@ -454,17 +335,25 @@
             <!-- <h4 class="modal-title">Modal Heading</h4> -->
             <div class="container-fluid">
               <div class="row">
-                <div class="col vm-col"><button type="button" id="v-btn"
-                    class="btn btn-primary btn-block">Vendors</button></div>
-                <div class="col vm-col"><button type="button" id="av-btn" class="btn btn-primary btn-block">Add
-                    Vendor</button></div>
-                <div class="col vm-col"><button type="button" id="vt-btn" class="btn btn-primary btn-block">Vendor
-                    Trainers</button></div>
-                <div class="col vm-col"><button type="button" id="avt-btn" class="btn btn-primary btn-block">Add Vendor
-                    Trainer</button></div>
+                <div class="col vm-col">
+                  <button type="button" id="v-btn" class="btn btn-primary btn-block">Vendors</button>
+                </div>
+                <div class="col vm-col">
+                  <button type="button" id="av-btn" class="btn btn-primary btn-block">Add Vendor
+                  </button>
+                </div>
+                <div class="col vm-col">
+                  <button type="button" id="vt-btn" class="btn btn-primary btn-block">Vendor Trainers
+                  </button>
+                </div>
+                <div class="col vm-col">
+                  <button type="button" id="avt-btn" class="btn btn-primary btn-block">Add Vendor Trainer
+                  </button>
+                </div>
 
-                <div class="col vm-col"><button type="button" class="btn btn-danger btn-block" id="close-vtm-btn"
-                    data-dismiss="modal"><i class="fas fa-times" style="margin-right: 0.5vw;"></i>Close</button>
+                <div class="col vm-col">
+                  <button type="button" class="btn btn-danger btn-block" id="close-vtm-btn" data-dismiss="modal">
+                    <i class="fas fa-times" style="margin-right: 0.5vw;"></i>Close</button>
                 </div>
               </div>
             </div>
@@ -479,15 +368,15 @@
 
                 <!-- Vendor List Row Begin -->
                 <div class="row">
-                  <div class="col"><button type="button" id="v-btn" class="btn btn-warning btn-block">Select</button>
+                  <div class="col">
+                    <button type="button" id="v-btn" class="btn btn-warning btn-block">Select</button>
                   </div>
                   <div class="col">
                     <div class="panel-group">
                       <div class="panel panel-default">
                         <div class="panel-heading">
                           <h4 class="panel-title">
-                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse"
-                              href="#collapse1">Fedex</button>
+                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse" href="#collapse1">Fedex</button>
                           </h4>
                         </div>
                         <div id="collapse1" class="panel-collapse vm-panel-collapse collapse">
@@ -505,21 +394,23 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col"><button type="button" class="btn btn-danger btn-block">Delete</button></div>
+                  <div class="col">
+                    <button type="button" class="btn btn-danger btn-block">Delete</button>
+                  </div>
                 </div>
                 <!-- Vendor List Row End -->
 
                 <!-- Vendor List Row Begin -->
                 <div class="row">
-                  <div class="col"><button type="button" id="v-btn" class="btn btn-warning btn-block">Select</button>
+                  <div class="col">
+                    <button type="button" id="v-btn" class="btn btn-warning btn-block">Select</button>
                   </div>
                   <div class="col">
                     <div class="panel-group">
                       <div class="panel panel-default">
                         <div class="panel-heading">
                           <h4 class="panel-title">
-                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse"
-                              href="#collapse2">Fedex</button>
+                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse" href="#collapse2">Fedex</button>
                           </h4>
                         </div>
                         <div id="collapse2" class="panel-collapse vm-panel-collapse collapse">
@@ -537,7 +428,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col"><button type="button" class="btn btn-danger btn-block">Delete</button></div>
+                  <div class="col">
+                    <button type="button" class="btn btn-danger btn-block">Delete</button>
+                  </div>
                 </div>
                 <!-- Vendor List Row End -->
 
@@ -559,8 +452,7 @@
                   </div>
                   <div class="form-group">
                     <label>Vendor Phone Number</label>
-                    <input type="text" class="form-control input-medium bfh-phone" id="phoneForm"
-                      data-format="+1 (ddd) ddd-dddd" placeholder="Enter Vendor phone number">
+                    <input type="text" class="form-control input-medium bfh-phone" id="phoneForm" data-format="+1 (ddd) ddd-dddd" placeholder="Enter Vendor phone number">
                   </div>
                   <div class="form-group">
                     <label>Vendor Email Address</label>
@@ -595,11 +487,9 @@
             </div>
             <!-- End Add Vendor Tab -->
 
-            <div class="pg3">&nbsp;
-              TODO:  A lot.
+            <div class="pg3">&nbsp; TODO: A lot.
             </div>
-            <div class="pg4">&nbsp;
-              TODO:  A lot.
+            <div class="pg4">&nbsp; TODO: A lot.
             </div>
 
           </div>
@@ -618,7 +508,8 @@
   <footer class="py-0" style="background-color: #3c8dbc; width: 100%; bottom: 0; position: fixed;">
     <div class="container">
       <p class="m-0 text-left text-white" style="position: relative; top: 10px">Version 0.0.1</p>
-      <p class="m-0 text-right text-white" style="position: relative; top: -14px">Copyright 2019</b></p>
+      <p class="m-0 text-right text-white" style="position: relative; top: -14px">Copyright 2019</b>
+      </p>
     </div>
     </div>
     <!-- /.container -->
