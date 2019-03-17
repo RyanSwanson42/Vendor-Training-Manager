@@ -198,42 +198,103 @@
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
-                    <div class="modal-body">
+                    <div style="overflow-y: scroll" class="modal-body">
                       <div class="row">
-                        <!-- First Column -->
                         <div class="col">
-                          <button id="btn" class="accordion">Shortlist Vendor</button>
-                          <div class="panel">
-                            <a class="nav-link" href="" id="vm-open" data-toggle="modal" data-target="#vm-modal" data-backdrop="static">Vendor Management</a>
+                          <!--Accordion start-->
+                          <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                              <!-- Card header -->
+                              <div class="card-header" role="tab" id="headingOne1">
+                                <a style="text-decoration:none" data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                                  aria-controls="collapseOne1">
+                                  <h5 class="mb-0">
+                                    Shortlist Vendor
+                                    <i class="fas fa-angle-down rotate-icon"></i>
+                                  </h5>
+                                </a>
+                              </div>
+                              <!-- Card body -->
+                              <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                <div class="card-body">
+                                  <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal" data-backdrop="static">Vendor Management</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <!-- Card header -->
+                              <div class="card-header" role="tab" id="headingTwo2">
+                                <a style="text-decoration:none" class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                                  aria-expanded="false" aria-controls="collapseTwo2">
+                                  <h5 class="mb-0">
+                                    Procurement Team Shortlist
+                                    <i class="fas fa-angle-down rotate-icon"></i>
+                                  </h5>
+                                </a>
+                              </div>
+                              <!-- Card body -->
+                              <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+                                <div class="card-body">
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                  non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                  3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                  shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                  sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                  farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                                  labore sustainable VHS.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <!-- Card header -->
+                              <div class="card-header" role="tab" id="headingThree3">
+                                <a style="text-decoration:none" class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+                                  aria-expanded="false" aria-controls="collapseThree3">
+                                  <h5 class="mb-0">
+                                    PM Approval
+                                    <i class="fas fa-angle-down rotate-icon"></i>
+                                  </h5>
+                                </a>
+                              </div>
+                              <!-- Card body -->
+                              <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
+                                <div class="card-body">
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                  non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                  3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                  shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                  sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                  farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                                  labore sustainable VHS.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <!-- Card header -->
+                              <div class="card-header" role="tab" id="headingFour4">
+                                <a style="text-decoration:none" class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFour4"
+                                  aria-expanded="false" aria-controls="collapseFour4">
+                                  <h5 class="mb-0">
+                                    Training Schedule
+                                    <i class="fas fa-angle-down rotate-icon"></i>
+                                  </h5>
+                                </a>
+                              </div>
+                              <!-- Card body -->
+                              <div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4" data-parent="#accordionEx">
+                                <div class="card-body">
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                  non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                  3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                  shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                  sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                  farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                                  labore sustainable VHS.
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <button id="btn" class="accordion">Procurement Team Shortlist</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <button id="btn" class="accordion">PM Approval</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <button id="btn" class="accordion">Training Schedule</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <!-- <button id="btn" class="accordion">Section 5</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                              nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div> -->
+                          <!-- Accordion end -->
                           <br>
                         </div>
                         <!-- Second Column -->
@@ -244,17 +305,17 @@
                               <p class="card-text">Summary of the progress of this training request is shown below</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Shortlist Vendor Completed
-                                <span id="completed" class="dot"></span>
+                              <li class="list-group-item">Shortlist Vendor
+                                <span id="completed" title="Completed" class="dot"></span>
                               </li>
-                              <li class="list-group-item">Procurement Team Shortlist Completed
-                                <span id="completed" class="dot"></span>
+                              <li class="list-group-item">Procurement Team Shortlist
+                                <span id="completed" title="Completed" class="dot"></span>
                               </li>
-                              <li class="list-group-item">PM Approval In Progress
-                                <span id="inprogressdot" class="dot"></span>
+                              <li class="list-group-item">PM Approval
+                                <span id="inprogressdot" title="In Progress" class="dot"></span>
                               </li>
-                              <li class="list-group-item">Training Schedule Pending
-                                <span id="pending" class="dot"></span>
+                              <li class="list-group-item">Training Schedule
+                                <span id="pending" title="Pending" class="dot"></span>
                               </li>
                               <!-- <li class="list-group-item">Step 5 Pending
                                 <span id="pending" class="dot"></span>
@@ -339,7 +400,9 @@
         <br>
       </div>
     </div>
-
+    <br>
+    <br>
+    <br>
   </div>
   <!-- /.container -->
 
@@ -590,24 +653,6 @@
 
       });
 
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
     });
   </script>
 

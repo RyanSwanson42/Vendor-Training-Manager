@@ -69,6 +69,7 @@ color: #9EC6DE;
 Integration of Modal- Styling
 */
 
+/*--------------------- MODAL WITH STEPS FOR SPOC TO EXECUTE ---------------------*/
 /* Modal Content */
 .modal-content {
   max-height: 80vh;
@@ -80,15 +81,41 @@ Integration of Modal- Styling
   width: 90% !important;
 }
 
-/* Modal Body */
-.modal-body{
-  overflow-y: scroll;
-}
-
 /* Modal Title */
 .modal-title {
   font-size: 20px;
   font-weight: 500;
+}
+
+/* Text weight for paragraphs */
+p:only-child {
+  font-weight: bold;
+}
+
+/*------------------------------- ACCORDION ELEMENTS--------------------------------*/
+i { 
+  float: right; 
+}
+
+.card-header {
+  background-color: #3c8dbc;
+}
+
+.mb-0 {
+  color: white;
+  text-align: center;
+}
+
+/*----------------- PROGRESS CARD IN THE LEFT SIDE OF THE MODAL --------------------*/
+/* Assigned id to card in modal to avoid interference with the card Class that Nicolas has used */
+#card {
+  width: 100%;
+}
+
+/* Assigned id to card-body in modal to avoid interference with the card-body Class that Nicolas has used */
+#card-body {
+  background-color: #3c8dbc;
+  color: white;
 }
 
 /* Status Dots */
@@ -102,46 +129,4 @@ Integration of Modal- Styling
 /* Different Colors for status dots */
 #completed { background-color:green;}
 #inprogressdot { background-color:yellow;}
-#pending {background-color:red;}
-
-/* Accordion */
-.accordion {
-  background-color: #3c8dbc;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-
-/* Accordion Hover */
-.active, .accordion:hover {
-  background-color: #367fa9; 
-}
-
-/* Text weight for paragraphs */
-p:only-child {
-  font-weight: bold;
-}
-
-/* Text for Accordion Sections */
-#btn {
-  color:white;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Assigned id to card in modal to avoid interference with the card Class that Nicolas has used */
-#card {
-  width: 100%;
-}
-
-/* Assigned id to card-body in modal to avoid interference with the card-body Class that Nicolas has used */
-#card-body {
-  background-color: #3c8dbc;
-  color: white;
-}
+#pending { background-color:red;}
