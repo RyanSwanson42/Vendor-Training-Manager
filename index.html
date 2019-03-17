@@ -10,15 +10,15 @@
   <title>Vendor TRM</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Custom JS -->
 
 
   <!-- FontAwesome-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- Custom styles-->
   <link href="css/style.css" rel="stylesheet">
@@ -38,8 +38,8 @@
           <b>TRM</b>
         </i>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -53,18 +53,20 @@
           </li>
           -->
           <li class="nav-item py-1" style="padding-right: 5px">
-            <input type="search" id="sb" style="color:white; border-radius: 15px; border:#fff 2px solid; background-color:#3c8dbc; padding-top: 2px; padding-bottom: 3px"
+            <input type="search" id="sb"
+              style="color:white; border-radius: 15px; border:#fff 2px solid; background-color:#3c8dbc; padding-top: 2px; padding-bottom: 3px"
               required placeholder="  Filter..." />
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Run Report</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal" data-backdrop="static">Vendor Management</a>
+            <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal"
+              data-backdrop="static">Vendor Management</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user-circle"></i>
               Mahesh
             </a>
@@ -94,18 +96,31 @@
     <div class="row text-left">
       <div class="col-md-3" style="border: 10px solid #FFFF66; border-style: none none none solid;">
         <h4>New</h4>
-        <button type="button" class="btn btn-outline-warning " id="bpbutton" style="float: right; position: relative; top: -40px; margin-right: 10px;">to Processing</button>
+        <button type="button" class="btn btn-outline-warning " id="bpbutton"
+          style="float: right; position: relative; top: -40px; margin-right: 10px;">to Processing</button>
         <div class="card" style="width: 13rem; margin-left: 10px; margin-top: 20px; " id="p1">
+          <!--The Beginning of adding icons and functionality-->
           <div class="cardcontainer">
             <input type="checkbox" class="form-check-input" id="check1">
             <div class="card-body">
-              <h5 class="card-title">Vendor Request</h5>
-              <h6 class="card-subtitle mb-2 text-muted">ID: 100558</h6>
-              <p class="card-text">Quick sample text to create the Vendor Request and make up the body of the request's content.
-              </p>
+              <h5 class="card-title"><span>
+                  <i class="fa fa-id-card" aria-hidden="true" style="color:blue;"></i> 455439</span>
 
+
+                <span style="float: right;"><img id="vendor_icon" src="img/vendor-icon-placeholder.png" /></span>
+              </h5>
+              <h6 class="card-subtitle mb-2 text-muted" style="margin-top: 5px;">
+                <span>&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;</span></h6>
+              <p class="card-text">
+
+                <span><i class="fas fa-user" style="color:red"></i> Project Manager</span><br>
+                <span> <i class="fas fa-map-marker-alt"></i> Location</span><br>
+                <span><i class="fas fa-poll-h"></i> Description</span><br>
+                <span> <i class="fas fa-users"></i> Participants</span><br>
+                <span> <i class="fas fa-calendar-day"></i> Start Date</span><br>
+              </p>
             </div>
-            <div id="overlay1" class="overlay">
+            <div id="overlay1" class="vendor-overlay">
               <div class="cardtext">
                 Data from Database
                 <br> More Data from Database
@@ -116,6 +131,7 @@
                 <br> More Data from Database
               </div>
             </div>
+
           </div>
         </div>
         <br>
@@ -125,7 +141,8 @@
             <div class="card-body">
               <h5 class="card-title">Vendor Request</h5>
               <h6 class="card-subtitle mb-2 text-muted">ID: 100559</h6>
-              <p class="card-text">Quick sample text to create another Vendor Request and make up the body of the request's content.</p>
+              <p class="card-text">Quick sample text to create another Vendor Request and make up the body of the
+                request's content.</p>
               <!--<a href="#" class="card-button">Process</a>-->
             </div>
             <div id="overlay2" class="overlay">
@@ -142,7 +159,8 @@
           </div>
         </div>
       </div>
-      <div id="processing-col" class="col" style="border: 10px solid #FFC04C;  border-style: none none none solid;" id="pd">
+      <div id="processing-col" class="col" style="border: 10px solid #FFC04C;  border-style: none none none solid;"
+        id="pd">
         <h4>Processing</h4>
         <div class="row" id="hp">
           <div class="card" style="margin-left: 10px; margin-top: 20px; width: 14rem;">
@@ -179,33 +197,42 @@
                         <div class="col">
                           <button id="btn" class="accordion">Shortlist Vendor</button>
                           <div class="panel">
-                            <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal" data-backdrop="static">Vendor Management</a>
+                            <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal"
+                              data-backdrop="static">Vendor Management</a>
                           </div>
                           <button id="btn" class="accordion">Section 2</button>
                           <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut
+                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                              laboris
                               nisi ut aliquip ex ea commodo consequat.
                             </p>
                           </div>
                           <button id="btn" class="accordion">Section 3</button>
                           <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut
+                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                              laboris
                               nisi ut aliquip ex ea commodo consequat.
                             </p>
                           </div>
                           <button id="btn" class="accordion">Section 4</button>
                           <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut
+                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                              laboris
                               nisi ut aliquip ex ea commodo consequat.
                             </p>
                           </div>
                           <button id="btn" class="accordion">Section 5</button>
                           <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                              incididunt ut
+                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                              laboris
                               nisi ut aliquip ex ea commodo consequat.
                             </p>
                           </div>
@@ -376,7 +403,8 @@
                       <div class="panel panel-default">
                         <div class="panel-heading">
                           <h4 class="panel-title">
-                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse" href="#collapse1">Fedex</button>
+                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse"
+                              href="#collapse1">Fedex</button>
                           </h4>
                         </div>
                         <div id="collapse1" class="panel-collapse vm-panel-collapse collapse">
@@ -410,7 +438,8 @@
                       <div class="panel panel-default">
                         <div class="panel-heading">
                           <h4 class="panel-title">
-                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse" href="#collapse2">Fedex</button>
+                            <button type="button" id="v-btn" class="btn btn-primary btn-block" data-toggle="collapse"
+                              href="#collapse2">Fedex</button>
                           </h4>
                         </div>
                         <div id="collapse2" class="panel-collapse vm-panel-collapse collapse">
@@ -452,7 +481,8 @@
                   </div>
                   <div class="form-group">
                     <label>Vendor Phone Number</label>
-                    <input type="text" class="form-control input-medium bfh-phone" id="phoneForm" data-format="+1 (ddd) ddd-dddd" placeholder="Enter Vendor phone number">
+                    <input type="text" class="form-control input-medium bfh-phone" id="phoneForm"
+                      data-format="+1 (ddd) ddd-dddd" placeholder="Enter Vendor phone number">
                   </div>
                   <div class="form-group">
                     <label>Vendor Email Address</label>
@@ -548,7 +578,7 @@
       $('#bpbutton').click(function () {
         if ($('#check1').is(':checked')) {
           $('#check1').hide();
-          $('#overlay1').hide();
+
           $("#p1").prependTo("#hp");
         }
         if ($('#check2').is(':checked')) {
@@ -556,7 +586,20 @@
           $('#overlay2').hide();
           $("#p2").prependTo("#hp");
         }
-      })
+      });
+
+      /**Jabril's funtion to create an onlick event for vendor training icon**/
+      $("#vendor_icon").click(function () {
+          var vendis = $(".vendor-overlay");
+          if(vendis.css("opacity") === "0"){
+            vendis.css("opacity","1");
+          
+          }
+          else if(vendis.css("opacity") === "1"){
+            vendis.css("opacity","0");
+          }
+      });
+
 
       $('#sb').change(function () {
         $('.card').show();
@@ -565,11 +608,6 @@
 
       });
 
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
       var acc = document.getElementsByClassName("accordion");
       var i;
       for (i = 0; i < acc.length; i++) {
