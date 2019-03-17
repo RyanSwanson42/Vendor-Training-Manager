@@ -13,9 +13,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous">
 
-  <!-- Custom JS -->
-
-
   <!-- FontAwesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
@@ -180,7 +177,6 @@
               <button style="float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 Open
               </button>
-              <!-- The Modal -->
               <div class="modal" id="myModal">
                 <div class="modal-dialog modal-xl">
                   <div class="modal-content">
@@ -197,17 +193,16 @@
                       </div>
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <!-- Modal body -->
                     <div style="overflow-y: scroll" class="modal-body">
                       <div class="row">
                         <div class="col">
                           <!--Accordion start-->
-                          <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                          <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
                             <div class="card">
                               <!-- Card header -->
                               <div class="card-header" role="tab" id="headingOne1">
-                                <a style="text-decoration:none" data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
-                                  aria-controls="collapseOne1">
+                                <a style="text-decoration:none" class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1"
+                                  aria-expanded="true" aria-controls="collapseOne1">
                                   <h5 class="mb-0">
                                     Shortlist Vendor
                                     <i class="fas fa-angle-down rotate-icon"></i>
@@ -283,21 +278,97 @@
                               <!-- Card body -->
                               <div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4" data-parent="#accordionEx">
                                 <div class="card-body">
-                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                  non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                  3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                  shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                  sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                  farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                                  labore sustainable VHS.
+                                  <form>
+                                    <label>Training Dates</label>
+                                    <div class="form-group">
+                                      <div class="row">
+                                        <div class="col-4">
+                                          <label>Start Date</label>
+                                        </div>
+                                        <input type="date" class="form-control-sm" id="startDate">
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-4">
+                                          <label>End Date</label>
+                                        </div>
+                                        <input type="date" class="form-control-sm" id="endDate">
+                                      </div>
+                                    </div>
+                                    <hr size="3">
+                                    <label>Training Type</label>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="classRoom" value="option1">
+                                      <label class="form-check-label" for="classRoom">
+                                        Class Room
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="online" value="option2">
+                                      <label class="form-check-label" for="online">
+                                        Online
+                                      </label>
+                                    </div>
+                                    <div id="classRoomForm" class="form-group">
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="city" placeholder="City" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="state" placeholder="State" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="country" placeholder="Country" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="zipcode" placeholder="Zipcode" type="number" pattern="\d*" max="99999" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="location" placeholder="Location" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="room" placeholder="Room Number" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div id="onlineForm" class="form-group">
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="url" placeholder="Training URL" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="audio" placeholder="Training Audio" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <!-- Accordion end -->
-                          <br>
                         </div>
-                        <!-- Second Column -->
                         <div class="col">
                           <div id="card" class="card">
                             <div id="card-body" class="card-body">
@@ -317,21 +388,16 @@
                               <li class="list-group-item">Training Schedule
                                 <span id="pending" title="Pending" class="dot"></span>
                               </li>
-                              <!-- <li class="list-group-item">Step 5 Pending
-                                <span id="pending" class="dot"></span>
-                              </li> -->
                             </ul>
                           </div>
                         </div>
                       </div>
                     </div>
-
                     <!-- Modal footer -->
                     <div class="modal-footer">
                       <button class="btn btn-danger" data-dismiss="modal">Close</button>
                       <button class="btn btn-primary">Save</button>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -408,7 +474,6 @@
 
   <!-- Begin Ryan's Vendor Modal Code -->
   <!-- 3/15/2019 -->
-
 
   <!-- Begin VM Modal container-->
   <div class="container">
@@ -586,10 +651,7 @@
       </div>
     </div>
   </div>
-
   <!-- End Ryan's Vendor Modal Code-->
-
-
 
 
   <!-- Footer -->
@@ -604,7 +666,6 @@
   </footer>
 
 
-
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -612,6 +673,7 @@
   <!-- <script src="js/accordion.js"></script>
   <script src="js/movecols.js"></script> -->
   <script src="js/vtm.js"></script>
+  <script src="js/schedule.js"></script>
 
   <script>
     $(document).ready(function () {
