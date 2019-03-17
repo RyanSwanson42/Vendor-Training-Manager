@@ -72,7 +72,7 @@ Integration of Modal- Styling
 /*--------------------- MODAL WITH STEPS FOR SPOC TO EXECUTE ---------------------*/
 /* Modal Content */
 .modal-content {
-  max-height: 80vh;
+  max-height: 85vh;
   overflow-y: auto; 
   background-color: #fefefe;
   margin: auto;
