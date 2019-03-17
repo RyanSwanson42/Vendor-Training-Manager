@@ -18,6 +18,20 @@
   transition: 1s ease;
   background-color: #3c8dbc;
 }
+
+.vendor-overlay {
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+  width: 100%;
+  opacity: 0;
+  transition: 1s ease;
+  background-color: #3c8dbc;
+}
+
 .cardtext {
   color: white;
   position: absolute;
@@ -63,6 +77,11 @@ color: #9EC6DE;
 
 /*lblue 3c8dbc*/
 /*dblu 367fa9*/
+/*--------------------- Vendor Icon cursor ---------------------*/
+
+#vendor_icon{
+  cursor: pointer;
+}
 
 /* Yosuf ElSaadany
 3/14/2019 1:47 pm
