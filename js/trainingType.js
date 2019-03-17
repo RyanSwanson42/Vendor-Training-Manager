@@ -12,5 +12,5 @@ $(document).ready(function () {
         $('#onlineForm').show();
         $('#classRoomForm').hide();
     })
-
+    
 });

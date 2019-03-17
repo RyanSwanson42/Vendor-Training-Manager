@@ -21,6 +21,14 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/vtm-modal.css" rel="stylesheet">
 
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Local js scripts-->
+  <script src="js/vtm.js"></script>
+  <script src="js/trainingType.js"></script>
+
 </head>
 
 <body style="padding-top: 70px">
@@ -279,7 +287,7 @@
                               <div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4" data-parent="#accordionEx">
                                 <div class="card-body">
                                   <form>
-                                    <label>Training Dates</label>
+                                    <!-- <label>Training Dates</label> -->
                                     <div class="form-group">
                                       <div class="row">
                                         <div class="col-4">
@@ -294,7 +302,17 @@
                                         <input type="date" class="form-control-sm" id="endDate">
                                       </div>
                                     </div>
-                                    <hr size="3">
+                                    <hr>
+                                    <div class="form-group">
+                                      <div class="row">
+                                        <div class="col-4">
+                                          <label>Participants</label>
+                                          <!-- <i class="fas fa-users"></i> -->
+                                        </div>
+                                        <input type="number" placeholder="Participants Count" class="form-control-sm" id="participants">
+                                      </div>
+                                    </div>
+                                    <hr>
                                     <label>Training Type</label>
                                     <div class="form-check">
                                       <input class="form-check-input" type="radio" name="exampleRadios" id="classRoom" value="option1">
@@ -659,16 +677,6 @@
     <!-- /.container -->
   </footer>
 
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Local js scripts-->
-  <!-- <script src="js/accordion.js"></script>
-  <script src="js/movecols.js"></script> -->
-  <script src="js/vtm.js"></script>
-  <script src="js/schedule.js"></script>
-
   <script>
     $(document).ready(function () {
       $('#hidebutton').click(
@@ -711,6 +719,28 @@
 
     });
   </script>
+
+  <script>
+    function handler(e) {
+      alert(e.target.value);
+    }
+  </script>
+
+  <!-- <script>
+    var start = $('#startDate').val();
+    var end = $('#endDate').val();
+
+    $('#startDate').change(function () {
+      if (start)
+        end.attr("min",start);
+    }, false);
+
+    $('#endDate').change(function () {
+      if (end)
+        start.max = end.value;
+    }, false);
+
+  </script> -->
 
 </body>
 
