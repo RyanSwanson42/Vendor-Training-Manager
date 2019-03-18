@@ -94,7 +94,7 @@
     top: 0;
     left: 0;
     height: 20px;
-    width: 100%
+    width: 100%;
     background-color: #eee;
   }
   
@@ -133,9 +133,6 @@
     transform: rotate(45deg);
   }
 
-  .chkbox-col {
- 
-  }
 
   /*************************/
   /* End Custom checkbox css */

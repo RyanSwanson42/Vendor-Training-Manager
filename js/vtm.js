@@ -42,12 +42,12 @@ $(document).ready(function () {
         $(".pg4").hide();
     });
 
-    /* Causes the collapsibles in the list tab to collapse when clicking away from them. QOL */
-    $(document).click(function (e) {
-        if (!$(e.target).is('.list-group-item')) {
-            $('.collapse').collapse('hide');
-        }
-    });
+    // /* Causes the collapsibles in the list tab to collapse when clicking away from them. QOL */
+    // $(document).click(function (e) {
+    //     if (!$(e.target).is('.list-group-item')) {
+    //         $('.collapse').collapse('hide');
+    //     }
+    // });
 
 
     /* 

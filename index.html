@@ -13,9 +13,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <!-- Custom JS -->
-
-
   <!-- FontAwesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -23,6 +20,14 @@
   <!-- Custom styles-->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/vtm-modal.css" rel="stylesheet">
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Local js scripts-->
+  <script src="js/vtm.js"></script>
+  <script src="js/trainingType.js"></script>
 
 </head>
 
@@ -102,14 +107,22 @@
           <div class="cardcontainer">
             <input type="checkbox" class="form-check-input" id="check1">
             <div class="card-body">
-              <h5 class="card-title">Vendor Request</h5>
-              <h6 class="card-subtitle mb-2 text-muted">ID: 100558</h6>
-              <p class="card-text">Quick sample text to create the Vendor Request and make up the body of the request's
-                content.
+              <h5 class="card-title">
+                <span><i class="fa fa-id-card" aria-hidden="true" style="color:blue; float: inherit;"></i> 455439</span>
+                <span style="float: right;"><img id="vendor_icon" src="img/vendor-icon-placeholder.png" /></span>
+              </h5>
+              <h6 class="card-subtitle mb-2 text-muted" style="margin-top: 5px;">
+                <span>&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;</span></h6>
+              <p class="card-text">
+                <span style="float: inline-start; "><i class="fas fa-user"
+                    style="color:red; float: inherit;"></i></span> Project Manager <br>
+                <span> <i class="fas fa-map-marker-alt" style="float: inherit;"></i> Location</span><br>
+                <span><i class="fas fa-poll-h" style="float: inherit;"></i> Description</span><br>
+                <span> <i class="fas fa-users" style="float: inherit;"></i> Participants</span><br>
+                <span> <i class="fas fa-calendar-day" style="float: inherit;"></i> Start Date</span><br>
               </p>
-
             </div>
-            <div id="overlay1" class="overlay">
+            <div id="overlay1" class="vendor-overlay">
               <div class="cardtext">
                 Data from Database
                 <br> More Data from Database
@@ -130,7 +143,8 @@
               <h5 class="card-title">Vendor Request</h5>
               <h6 class="card-subtitle mb-2 text-muted">ID: 100559</h6>
               <p class="card-text">Quick sample text to create another Vendor Request and make up the body of the
-                request's content.</p>
+                request's content.
+              </p>
               <!--<a href="#" class="card-button">Process</a>-->
             </div>
             <div id="overlay2" class="overlay">
@@ -157,11 +171,35 @@
               <h6 class="card-subtitle mb-2 text-muted">ID: 100560</h6>
               <p class="card-text">Big Data Training</p>
 
+              <!-- Yosuf ElSaadany 3/15/2019 11:06 pm Adding Approval Email Popup -->
+              <button style="float:left" class="btn btn-primary" data-toggle="modal" data-target="#approval">
+                Approvals
+              </button>
+              <div class="modal" id="approval">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <div class="modal-title">Attach Approval Email</div>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <input type="file" />
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button class="btn btn-primary">Upload</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <!-- Yosuf ElSaadany 3/14/2019 1:47 pm Integration of Modal- DOM for Modal -->
               <button style="float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 Open
               </button>
-              <!-- The Modal -->
               <div class="modal" id="myModal">
                 <div class="modal-dialog modal-xl">
                   <div class="modal-content">
@@ -178,55 +216,211 @@
                       </div>
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <!-- Modal body -->
-                    <div class="modal-body">
+                    <div style="overflow-y: scroll" class="modal-body">
                       <div class="row">
-                        <!-- First Column -->
                         <div class="col">
-                          <button id="btn" class="accordion">Shortlist Vendor</button>
-                          <div class="panel">
-                            <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal"
-                              data-backdrop="static">Vendor Management</a>
+                          <!--Accordion start-->
+                          <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                              <!-- Card header -->
+                              <div class="card-header" role="tab" id="headingOne1">
+                                <a style="text-decoration:none" class="collapsed" data-toggle="collapse"
+                                  data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                                  aria-controls="collapseOne1">
+                                  <h5 class="mb-0">
+                                    Shortlist Vendor
+                                    <i class="fas fa-angle-down rotate-icon"></i>
+                                  </h5>
+                                </a>
+                              </div>
+                              <!-- Card body -->
+                              <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                                data-parent="#accordionEx">
+                                <div class="card-body">
+                                  <a class="nav-link" href="#" id="vm-open" data-toggle="modal" data-target="#vm-modal"
+                                    data-backdrop="static">Vendor Management</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <!-- Card header -->
+                              <div class="card-header" role="tab" id="headingTwo2">
+                                <a style="text-decoration:none" class="collapsed" data-toggle="collapse"
+                                  data-parent="#accordionEx" href="#collapseTwo2" aria-expanded="false"
+                                  aria-controls="collapseTwo2">
+                                  <h5 class="mb-0">
+                                    Procurement Team Shortlist
+                                    <i class="fas fa-angle-down rotate-icon"></i>
+                                  </h5>
+                                </a>
+                              </div>
+                              <!-- Card body -->
+                              <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                                data-parent="#accordionEx">
+                                <div class="card-body">
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
+                                  ad squid. 3 wolf moon officia aute,
+                                  non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                  Brunch
+                                  3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                                  assumenda
+                                  shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                  nesciunt
+                                  sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                  beer
+                                  farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                  accusamus
+                                  labore sustainable VHS.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <!-- Card header -->
+                              <div class="card-header" role="tab" id="headingThree3">
+                                <a style="text-decoration:none" class="collapsed" data-toggle="collapse"
+                                  data-parent="#accordionEx" href="#collapseThree3" aria-expanded="false"
+                                  aria-controls="collapseThree3">
+                                  <h5 class="mb-0">
+                                    PM Approval
+                                    <i class="fas fa-angle-down rotate-icon"></i>
+                                  </h5>
+                                </a>
+                              </div>
+                              <!-- Card body -->
+                              <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                                data-parent="#accordionEx">
+                                <div class="card-body">
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
+                                  ad squid. 3 wolf moon officia aute,
+                                  non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                  Brunch
+                                  3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                                  assumenda
+                                  shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                  nesciunt
+                                  sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                  beer
+                                  farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                  accusamus
+                                  labore sustainable VHS.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <!-- Card header -->
+                              <div class="card-header" role="tab" id="headingFour4">
+                                <a style="text-decoration:none" class="collapsed" data-toggle="collapse"
+                                  data-parent="#accordionEx" href="#collapseFour4" aria-expanded="false"
+                                  aria-controls="collapseFour4">
+                                  <h5 class="mb-0">
+                                    Training Schedule
+                                    <i class="fas fa-angle-down rotate-icon"></i>
+                                  </h5>
+                                </a>
+                              </div>
+                              <!-- Card body -->
+                              <div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4"
+                                data-parent="#accordionEx">
+                                <div class="card-body">
+                                  <form>
+                                    <!-- <label>Training Dates</label> -->
+                                    <div class="form-group">
+                                      <div class="row">
+                                        <div class="col-4">
+                                          <label>Start Date</label>
+                                        </div>
+                                        <input type="date" class="form-control-sm" id="startDate">
+                                      </div>
+                                      <div style="margin-top: 0.4rem;" class="row">
+                                        <div class="col-4">
+                                          <label>End Date</label>
+                                        </div>
+                                        <input type="date" class="form-control-sm" id="endDate">
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                      <div class="row">
+                                        <div class="col-4">
+                                          <label>Participants</label>
+                                          <!-- <i class="fas fa-users"></i> -->
+                                        </div>
+                                        <input type="number" placeholder="Participants Count" class="form-control-sm" id="participants">
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <label>Training Type</label>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="classRoom"
+                                        value="option1">
+                                      <label class="form-check-label" for="classRoom">
+                                        Class Room
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="online"
+                                        value="option2">
+                                      <label class="form-check-label" for="online">
+                                        Online
+                                      </label>
+                                    </div>
+                                    <div id="classRoomForm" class="form-group">
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="city" placeholder="City" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div style="margin-top: 0.4rem;" class="row">
+                                        <div class="col">
+                                          <input id="state" placeholder="State" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div style="margin-top: 0.4rem;" class="row">
+                                        <div class="col">
+                                          <input id="country" placeholder="Country" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div style="margin-top: 0.4rem;" class="row">
+                                        <div class="col">
+                                          <input id="zipcode" placeholder="Zipcode" type="number" pattern="\d*"
+                                            max="99999" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div style="margin-top: 0.4rem;" class="row">
+                                        <div class="col">
+                                          <input id="location" placeholder="Location" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div style="margin-top: 0.4rem;" class="row">
+                                        <div class="col">
+                                          <input id="room" placeholder="Room Number" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div id="onlineForm" class="form-group">
+                                      <div class="row">
+                                        <div class="col">
+                                          <br>
+                                          <input id="url" placeholder="Training URL" type="text" class="form-control">
+                                        </div>
+                                      </div>
+                                      <div style="margin-top: 0.4rem;" class="row">
+                                        <div class="col">
+                                          <input id="audio" placeholder="Training Audio" type="text"
+                                            class="form-control">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <button style="float: right" type="submit" class="btn btn-primary">Submit</button>
+                                    <br>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <button id="btn" class="accordion">Section 2</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                              laboris
-                              nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <button id="btn" class="accordion">Section 3</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                              laboris
-                              nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <button id="btn" class="accordion">Section 4</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                              laboris
-                              nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <button id="btn" class="accordion">Section 5</button>
-                          <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut
-                              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                              laboris
-                              nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                          </div>
-                          <br>
+                          <!-- Accordion end -->
                         </div>
-                        <!-- Second Column -->
                         <div class="col">
                           <div id="card" class="card">
                             <div id="card-body" class="card-body">
@@ -234,33 +428,28 @@
                               <p class="card-text">Summary of the progress of this training request is shown below</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Step 1 Completed
-                                <span id="completed" class="dot"></span>
+                              <li class="list-group-item">Shortlist Vendor
+                                <span id="completed" title="Completed" class="dot"></span>
                               </li>
-                              <li class="list-group-item">Step 2 Completed
-                                <span id="completed" class="dot"></span>
+                              <li class="list-group-item">Procurement Team Shortlist
+                                <span id="completed" title="Completed" class="dot"></span>
                               </li>
-                              <li class="list-group-item">Step 3 In Progress
-                                <span id="inprogressdot" class="dot"></span>
+                              <li class="list-group-item">PM Approval
+                                <span id="inprogressdot" title="In Progress" class="dot"></span>
                               </li>
-                              <li class="list-group-item">Step 4 Pending
-                                <span id="pending" class="dot"></span>
-                              </li>
-                              <li class="list-group-item">Step 5 Pending
-                                <span id="pending" class="dot"></span>
+                              <li class="list-group-item">Training Schedule
+                                <span id="pending" title="Pending" class="dot"></span>
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </div>
-
                     <!-- Modal footer -->
                     <div class="modal-footer">
                       <button class="btn btn-danger" data-dismiss="modal">Close</button>
                       <button class="btn btn-primary">Save</button>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -329,13 +518,14 @@
         <br>
       </div>
     </div>
-
+    <br>
+    <br>
+    <br>
   </div>
   <!-- /.container -->
 
   <!-- Begin Ryan's Vendor Modal Code -->
   <!-- 3/15/2019 -->
-
 
   <!-- Begin VM Modal container-->
   <div class="container">
@@ -352,7 +542,7 @@
               <nav class="navbar navbar-expand-lg navbar-dark justify-content-end" style="background-color: #3c8dbc">
                 <ul class="nav navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" data-dismiss="modal" id="close_modal"><i class="fas fa-times"></i> Close</a>
+                    <a class="nav-link" data-dismiss="modal" id="close_modal"><!-- <i class="fas fa-times"> --></i> Close</a>
                   </li>
                 </ul>
               </nav>
@@ -391,8 +581,6 @@
   <!-- End Ryan's Vendor Modal Code-->
 
 
-
-
   <!-- Footer -->
   <footer class="py-0" style="background-color: #3c8dbc; width: 100%; bottom: 0; position: fixed;">
     <div class="container">
@@ -403,16 +591,6 @@
     </div>
     <!-- /.container -->
   </footer>
-
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Local js scripts-->
-  <!-- <script src="js/accordion.js"></script>
-  <script src="js/movecols.js"></script> -->
-  <script src="js/vtm.js"></script>
 
   <script>
     $(document).ready(function () {
@@ -434,10 +612,22 @@
         }
       );
 
+      /**Jabril's funtion to create an onlick event for vendor training icon**/
+      $("#vendor_icon").click(function () {
+        var vendis = $(".vendor-overlay");
+        if (vendis.css("opacity") === "0") {
+          vendis.css("opacity", "1");
+
+        }
+        else if (vendis.css("opacity") === "1") {
+          vendis.css("opacity", "0");
+        }
+      });
+
       $('#bpbutton').click(function () {
         if ($('#check1').is(':checked')) {
           $('#check1').hide();
-          $('#overlay1').hide();
+          // $('#overlay1').hide();
           $("#p1").prependTo("#hp");
         }
         if ($('#check2').is(':checked')) {
@@ -458,22 +648,26 @@
   </script>
 
   <script>
-    $(document).ready(function () {
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
-    });
+    function handler(e) {
+      alert(e.target.value);
+    }
   </script>
+
+  <!-- <script>
+    var start = $('#startDate').val();
+    var end = $('#endDate').val();
+
+    $('#startDate').change(function () {
+      if (start)
+        end.attr("min",start);
+    }, false);
+
+    $('#endDate').change(function () {
+      if (end)
+        start.max = end.value;
+    }, false);
+
+  </script> -->
 
 </body>
 
