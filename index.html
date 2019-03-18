@@ -117,7 +117,6 @@
                 <span style="float: inline-start; "><i class="fas fa-user"
                     style="color:red; float: inherit;"></i></span> Project Manager <br>
                 <span> <i class="fas fa-map-marker-alt" style="float: inherit;"></i> Location</span><br>
-                <span><i class="fas fa-poll-h" style="float: inherit;"></i> Description</span><br>
                 <span> <i class="fas fa-users" style="float: inherit;"></i> Participants</span><br>
                 <span> <i class="fas fa-calendar-day" style="float: inherit;"></i> Start Date</span><br>
               </p>
@@ -613,15 +612,19 @@
       );
 
       /**Jabril's funtion to create an onlick event for vendor training icon**/
-      $("#vendor_icon").click(function () {
+      $("#vendor_icon").mouseover(function () {
         var vendis = $(".vendor-overlay");
-        if (vendis.css("opacity") === "0") {
           vendis.css("opacity", "1");
 
-        }
-        else if (vendis.css("opacity") === "1") {
+      
+        
+      });
+      $("#vendor_icon").mouseout(function () {
+        var vendis = $(".vendor-overlay");
           vendis.css("opacity", "0");
-        }
+          
+      
+        
       });
 
       $('#bpbutton').click(function () {
