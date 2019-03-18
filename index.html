@@ -170,35 +170,11 @@
               <h6 class="card-subtitle mb-2 text-muted">ID: 100560</h6>
               <p class="card-text">Big Data Training</p>
 
-              <!-- Yosuf ElSaadany 3/15/2019 11:06 pm Adding Approval Email Popup -->
-              <button style="float:left" class="btn btn-primary" data-toggle="modal" data-target="#approval">
-                Approvals
-              </button>
-              <div class="modal" id="approval">
-                <div class="modal-dialog modal-md">
-                  <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                      <div class="modal-title">Attach Approval Email</div>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                      <input type="file" />
-                    </div>
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                      <button class="btn btn-danger" data-dismiss="modal">Close</button>
-                      <button class="btn btn-primary">Upload</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <!-- Yosuf ElSaadany 3/14/2019 1:47 pm Integration of Modal- DOM for Modal -->
-              <button style="float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+              <!-- <button style="float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 Open
-              </button>
+              </button> -->
+              <i style="margin-left: 10px" id="modalIcons" title="Open" data-toggle="modal" data-target="#myModal" class="fas fa-external-link-alt"></i>
               <div class="modal" id="myModal">
                 <div class="modal-dialog modal-xl">
                   <div class="modal-content">
@@ -449,6 +425,32 @@
                     <div class="modal-footer">
                       <button class="btn btn-danger" data-dismiss="modal">Close</button>
                       <button class="btn btn-primary">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Yosuf ElSaadany 3/15/2019 11:06 pm Adding Approval Email Popup -->
+              <!-- <button style="float:left" class="btn btn-primary" data-toggle="modal" data-target="#approval">
+                Approvals
+              </button> -->
+              <i id="modalIcons" title="Upload" data-toggle="modal" data-target="#approval" class="fas fa-upload"></i>
+              <div class="modal" id="approval">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <div class="modal-title">Attach Approval Email</div>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <input type="file" />
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button class="btn btn-primary">Upload</button>
                     </div>
                   </div>
                 </div>
