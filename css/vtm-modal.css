@@ -42,12 +42,14 @@
     overflow: auto;
 }
 
-/* .vm-grid-container {
-    border-style:solid;
+.vm-grid-container {
+    /* border-style:solid;
     border-color: rgb(24, 137, 189);
     border-width: 1px;
-    height: 40vh;
-} */
+    height: 40vh; */
+    position: relative;
+    margin-right: 20px;
+}
 
 .vm-col {
     border-style:solid;
@@ -58,6 +60,43 @@
 
 .vm-col:hover {
     background-color: rgb(47, 78, 145);
+}
+
+.chkbox-col {
+    border-style: none;
+    border-width: 0px;
+    background-color: white;
+}
+
+.chkbox-col:hover {
+    background-color: white;
+}
+
+
+#nv-btn {
+    position: absolute;
+    right: 20px;
+    background-color:#3c8dbc;
+    border-style: groove;
+    border-color: white;
+    border-width: 3px;
+}
+
+#v-search {
+    position: absolute;
+    right: 150px;
+    margin-top: 2px;
+    background-color: #5d99bd;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    color: white;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+#v-search:hover {
+    background-color: #3c8dbc;
 }
 
 
@@ -91,11 +130,15 @@
   /* Create a custom checkbox */
   .checkmark {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 100%;
+    top: 1px;
+    right: 0;
+    height: 23px;
+    width: 25px;
     background-color: #eee;
+    border-style: solid;
+    border-color:  rgb(113, 155, 233);
+    border-width: 1px;
+    border-radius: 5px;
   }
   
   /* On mouse-over, add a grey background color */
@@ -105,7 +148,7 @@
   
   /* When the checkbox is checked, add a blue background */
   .chkbox-container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: rgb(113, 155, 233);
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -113,6 +156,9 @@
     content: "";
     position: absolute;
     display: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   /* Show the checkmark when checked */
@@ -128,6 +174,9 @@
     height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
