@@ -24,6 +24,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
 
   <!-- Local js scripts-->
   <script src="js/vtm.js"></script>
@@ -70,9 +72,8 @@
               data-backdrop="static">Vendor Management</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user-circle"></i>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user-circle" style="float:none;"></i>
               Mahesh
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -103,33 +104,45 @@
         <h4>New</h4>
         <button type="button" class="btn btn-outline-warning " id="bpbutton"
           style="float: right; position: relative; top: -40px; margin-right: 10px;">to Processing</button>
-        <div class="card" style="width: 13rem; margin-left: 10px; margin-top: 20px; " id="p1">
+        <div class="card" style="width: 13rem; margin-left: 10px; margin-top: 20px;" id="p1">
           <div class="cardcontainer">
             <input type="checkbox" class="form-check-input" id="check1">
             <div class="card-body">
               <h5 class="card-title">
-                <span><i class="fa fa-id-card" aria-hidden="true" style="color:blue; float: inherit;"></i> 455439</span>
-                <span style="float: right;"><img id="vendor_icon" src="img/vendor-icon-placeholder.png" /></span>
+                <span><i class="fa fa-id-card" aria-hidden="true" style="color:#3c8dbc; float: inherit;"></i> 455439</span>
+                <span style="float: right;"><img id="vendor_icon" style="margin-top:27px;" src="img/vendor-icon-placeholder.png" /></span>
               </h5>
-              <h6 class="card-subtitle mb-2 text-muted" style="margin-top: 5px;">
-                <span>&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;</span></h6>
+              <hr style="width:75%;  border-color:#b9b9b9;">
               <p class="card-text">
-                <span style="float: inline-start; "><i class="fas fa-user"
-                    style="color:red; float: inherit;"></i></span> Project Manager <br>
-                <span> <i class="fas fa-map-marker-alt" style="float: inherit;"></i> Location</span><br>
-                <span> <i class="fas fa-users" style="float: inherit;"></i> Participants</span><br>
-                <span> <i class="fas fa-calendar-day" style="float: inherit;"></i> Start Date</span><br>
+                  <table style="margin-bottom:-15px;">
+                      <tr>
+                        <td style="text-align: center"><i class="fas fa-user" style="color:#ff3232; float: inherit;"></i></td>
+                        <td style="text-align: left; padding-left:5px;"><a href="#" class="reset-a" id="hoverelement1">Proj Manager</a> </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center"><i class="fas fa-network-wired" style="float: inherit; color:#323232"></i></td>
+                        <td style="text-align: left; padding-left:5px;"><a href="#" class="reset-a" id="hoverelement2">Module</a></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center"> <i class="fas fa-map-marker-alt" style="float: inherit; color:#323232"></i></td>
+                        <td style="text-align: left; padding-left:5px;"><a href="#" class="reset-a" id="hoverelement3">Location</a></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center"><i class="fas fa-users" style="float: inherit; color:#323232"></i></td>
+                        <td style="text-align: left; padding-left:5px;"> <a href="#" class="reset-a" id="hoverelement4">Participants</a></td>
+                      </tr>
+                      <tr>
+                          <td style="text-align: center"><i class="fas fa-calendar-day" style="float: inherit;  color:#323232"></i></td>
+                          <td style="text-align: left; padding-left:5px;"><a href="#" class="reset-a" id="hoverelement5">Start Date</a></td>
+                        </tr>
+                    </table>
               </p>
             </div>
             <div id="overlay1" class="vendor-overlay">
               <div class="cardtext">
-                Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
+                  <p style="font-family: Arial, Helvetica, sans-serif; font-size: medium; font-weight: 400;">
+                     More details about the module and some more details about the module.
+                  </p>
               </div>
             </div>
           </div>
@@ -138,25 +151,37 @@
         <div class="card" style="width: 13rem; margin-left: 10px; margin-top: 20px;" id="p2">
           <input type="checkbox" class="form-check-input" id="check2">
           <div class="cardcontainer">
-            <div class="card-body">
-              <h5 class="card-title">Vendor Request</h5>
-              <h6 class="card-subtitle mb-2 text-muted">ID: 100559</h6>
-              <p class="card-text">Quick sample text to create another Vendor Request and make up the body of the
-                request's content.
-              </p>
-              <!--<a href="#" class="card-button">Process</a>-->
-            </div>
-            <div id="overlay2" class="overlay">
-              <div class="cardtext">
-                Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
-                <br> More Data from Database
-              </div>
-            </div>
+              <div class="card-body">
+                  <h5 class="card-title">
+                    <span><i class="fa fa-id-card" aria-hidden="true" style="color:#3c8dbc; float: inherit;"></i> 455440</span>
+                    <span style="float: right;"><img id="vendor_icon2" style="margin-top:27px;" src="img/vendor-icon-placeholder.png" /></span>
+                  </h5>
+                  <hr style="width:75%;  border-color:#b9b9b9;">
+                  <p class="card-text">
+                  <table style="margin-bottom:-15px;">
+                      <tr>
+                        <td style="text-align: center"><i class="fas fa-user" style="color:#ff3232; float: inherit;"></i></td>
+                        <td style="text-align: left; padding-left:5px;"><a href="#" class="reset-a" id="hoverelement1-2">Proj Manager</a> </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center"><i class="fas fa-network-wired" style="float: inherit; color:#323232"></i></td>
+                        <td style="text-align: left; padding-left:5px;"><a href="#" class="reset-a" id="hoverelement2-2">Module</a></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center"> <i class="fas fa-map-marker-alt" style="float: inherit; color:#323232"></i></td>
+                        <td style="text-align: left; padding-left:5px;"><a href="#" class="reset-a" id="hoverelement3-2">Location</a></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center"><i class="fas fa-users" style="float: inherit; color:#323232"></i></td>
+                        <td style="text-align: left; padding-left:5px;"> <a href="#" class="reset-a" id="hoverelement4-2">Participants</a></td>
+                      </tr>
+                      <tr>
+                          <td style="text-align: center"><i class="fas fa-calendar-day" style="float: inherit;  color:#323232"></i></td>
+                          <td style="text-align: left; padding-left:5px;"><a href="#" class="reset-a" id="hoverelement5-2">Start Date</a></td>
+                        </tr>
+                    </table>
+                  </p>
+                </div>
           </div>
         </div>
       </div>
@@ -510,9 +535,13 @@
       <div id="inprogress" class="col-md-3" style="border: 10px solid lightgreen;  border-style: none none none solid;">
         <h4>In Progress</h4>
         <div class="card" style="margin-top: 20px; width: 14rem;">
-          <div class="card-body">
-            <h5 class="card-title">Vendor Request</h5>
-            <h6 class="card-subtitle mb-2 text-muted">ID: 100570</h6>
+            <div class="card-body">
+                <h5 class="card-title">
+                  <span><i class="fa fa-id-card" aria-hidden="true" style="color:#3c8dbc; float: inherit;"></i> 454664</span>
+                  <span style="float: right;"><img id="vendor_icon2" style="margin-top:27px;" src="img/vendor-icon-placeholder.png" /></span>
+                </h5>
+                <hr style="width:75%;  border-color:#b9b9b9;">
+            <h6 class="card-subtitle mb-2 text-muted"> <i class="fas fa-network-wired" style="float:none; margin-right: 5px;" ></i>Module Name</h6>
             <p class="card-text">Take attendence.</p>
           </div>
         </div>
@@ -543,7 +572,7 @@
               <nav class="navbar navbar-expand-lg navbar-dark justify-content-end" style="background-color: #3c8dbc">
                 <ul class="nav navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" data-dismiss="modal" id="close_modal"><!-- <i class="fas fa-times"> --></i> Close</a>
+                    <a class="nav-link" data-dismiss="modal" id="close_modal"><!-- <i class="fas fa-times"></i> --> Close</a>
                   </li>
                 </ul>
               </nav>
@@ -613,20 +642,49 @@
         }
       );
 
+      $('#hoverelement1').hover(function(){
+				$main_text=$(this).text();
+				$(this).html(" <b>David Collins</b>");
+			},function(){
+				$(this).text($main_text);
+				});
+
+        $('#hoverelement2').hover(function(){
+				$main_text=$(this).text();
+				$(this).html(" <b>React Native</b>");
+			},function(){
+				$(this).text($main_text);
+				});
+
+        $('#hoverelement3').hover(function(){
+				$main_text=$(this).text();
+				$(this).html(" <b>Phoenix, AZ</b>");
+			},function(){
+				$(this).text($main_text);
+				});
+
+        $('#hoverelement4').hover(function(){
+				$main_text=$(this).text();
+				$(this).html(" <b>30 approx.</b>");
+			},function(){
+				$(this).text($main_text);
+				});
+
+        $('#hoverelement5').hover(function(){
+				$main_text=$(this).text();
+				$(this).html(" <b>3-18-2019</b>");
+			},function(){
+				$(this).text($main_text);
+				});
+
       /**Jabril's funtion to create an onlick event for vendor training icon**/
       $("#vendor_icon").mouseover(function () {
         var vendis = $(".vendor-overlay");
-          vendis.css("opacity", "1");
-
-      
-        
+          vendis.css("visibility", "visible");        
       });
       $("#vendor_icon").mouseout(function () {
         var vendis = $(".vendor-overlay");
-          vendis.css("opacity", "0");
-          
-      
-        
+          vendis.css("visibility", "hidden");
       });
 
       $('#bpbutton').click(function () {
@@ -648,6 +706,7 @@
         $('.container').find(".card-title:not(:contains(" + filter + "))").parent().css('display', 'none');
 
       });
+
 
     });
   </script>
