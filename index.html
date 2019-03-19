@@ -174,7 +174,8 @@
               <!-- <button style="float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 Open
               </button> -->
-              <i style="margin-left: 10px" id="modalIcons" title="Open" data-toggle="modal" data-target="#myModal" class="fas fa-external-link-alt"></i>
+              <i style="margin-left: 10px" id="modalIcons" title="Open" data-toggle="modal" data-target="#myModal"
+                class="fas fa-external-link-alt"></i>
               <div class="modal" id="myModal">
                 <div class="modal-dialog modal-xl">
                   <div class="modal-content">
@@ -545,13 +546,15 @@
               <nav class="navbar navbar-expand-lg navbar-dark justify-content-end" style="background-color: #3c8dbc">
                 <ul class="nav navbar-nav">
                   <li class="nav-item">
-          
-                          <h3 class="navbar-brand" style="color:white; position: absolute; left: 5px; font-style: italics;">Vendor Training Management</h3>
+
+                    <h3 class="navbar-brand" style="color:white; position: absolute; left: 5px;">
+                      Vendor Training Management</h3>
 
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" data-dismiss="modal" id="close_modal">
-                      <!-- <i class="fas fa-times"> --></i> Close</a>
+                      <i class="fas fa-times" style="float: left; margin-top: 4px; margin-right: 5px;"></i>
+                      Close</a>
                   </li>
                 </ul>
               </nav>
@@ -561,50 +564,127 @@
           <!-- Modal body -->
           <div class="modal-body vm-mb">
 
+            <!-- Vendor List Page -->
+            <div class="vendor-list-pg">
 
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col">
-                  <input type="search" id="v-search" required placeholder="    Search" />
+                <input type="search" id="v-search" required placeholder="    Search" />
+
+                <button type="button" class="btn btn-info" id="nv-btn">New Vendor</button>
+
+
+              <br><br><br>
+              <div class="container-fluid vm-grid-container">
+                <div class="row vm-row">
+                  <div class="col vm-col chkbox-col">
+                    <label class="chkbox-container">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="col vm-col">Fedex</div>
+                  <div class="col vm-col">Info1</div>
+                  <div class="col vm-col">Info2</div>
+                  <div class="col vm-col">Info3</div>
+                  <div class="col vm-col">Edit</div>
+                  <div class="col vm-col-del">Delete</div>
+                  <div class="col vm-col">Trainers</div>
+                  <div class="col vm-col">All Info</div>
                 </div>
-                <!-- New Vendor Button -->
-                <div class="col">
-
-                  <button type="button" class="btn btn-info" id="nv-btn">New Vendor</button>
+                <div class="row vm-row">
+                  <div class="col vm-col chkbox-col">
+                    <label class="chkbox-container">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="col vm-col">Fedex</div>
+                  <div class="col vm-col">Info1</div>
+                  <div class="col vm-col">Info2</div>
+                  <div class="col vm-col">Info3</div>
+                  <div class="col vm-col">Edit</div>
+                  <div class="col vm-col-del">Delete</div>
+                  <div class="col vm-col">Trainers</div>
+                  <div class="col vm-col">All Info</div>
                 </div>
               </div>
-
-
             </div>
-            <br><br><br>
-            <div class="container-fluid vm-grid-container">
-              <div class="row vm-row">
-                <div class="col vm-col chkbox-col">
-                  <label class="chkbox-container">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                  </label>
+            <!-- End Vendor List Page-->
+
+            <!-- Add Vendor Page -->
+            <div class="vendor-add-pg">
+              <button type="button" class="btn btn-primary" id="return-btn">Return</button>
+              &nbsp;
+              <div class="container">
+                <h3>Add a New Vendor Account</h3>
+                <p>Fill out all pertinent information.</p>
+                <form id="va-form">
+                  <div class="form-group">
+                    <label>Vendor Name</label>
+                    <input type="text" class="form-control" id="nameForm" placeholder="Enter Vendor name">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Phone Number</label>
+                    <input type="text" class="form-control input-medium bfh-phone" id="phoneForm"
+                      data-format="+1 (ddd) ddd-dddd" placeholder="Enter Vendor phone number">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Email Address</label>
+                    <input type="email" class="form-control" id="emailForm" placeholder="Enter Vendor email">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor City</label>
+                    <input type="text" class="form-control" id="cityForm" placeholder="Enter Vendor City">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor State</label>
+                    <input type="text" class="form-control" id="stateForm" placeholder="Enter Vendor State">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Country</label>
+                    <input type="text" class="form-control" id="countryForm" placeholder="Enter Vendor Country">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Zipcode</label>
+                    <input type="number" class="form-control" id="zipForm" placeholder="Enter Vendor Zip">
+                  </div>
+                  <div class="form-group">
+                    <label>Vendor Time Zone</label>
+                    <input type="text" class="form-control" id="timezoneForm" placeholder="Enter Vendor Time Zone">
+                  </div>
+                  <br>
+                </form>
+                <div style="text-align:center; margin-bottom: 2vh;">
+                  <button type="button" id="submit-btn" class="btn btn-success">Submit</button>
                 </div>
-                <div class="col vm-col">Fedex</div>
-                <div class="col vm-col">Info1</div>
-                <div class="col vm-col">Info2</div>
-                <div class="col vm-col">Info3</div>
-                <div class="col vm-col">Edit</div>
-                <div class="col vm-col">Delete</div>
-                <div class="col vm-col">Trainers</div>
-                <div class="col vm-col">All Info</div>
               </div>
             </div>
+            <!-- End Vendor Add Page -->
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Add Vendor Side-Modal
+  <div class="modal right fade" id="addVendorModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal sideout normal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
 
 
 
