@@ -127,6 +127,13 @@ p:only-child {
   color: #3c8dbc;
 }
 
+/*---------------------------- Modal for Approval Email ----------------------------*/
+
+#approval {
+  margin-left: 10%;
+  margin-top: 19%;
+}
+
 /*------------------------------- ACCORDION ELEMENTS--------------------------------*/
 i { 
   float: right; 
