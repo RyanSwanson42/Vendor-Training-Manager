@@ -21,14 +21,15 @@
 
 .vendor-overlay {
   position: absolute;
-  top: 30%;
+  top: 27%;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 70%;
+  height: 73%;
   width: 100%;
-  opacity: 0;
-  transition: 1s ease;
+  visibility: hidden;
+  /*opacity: 0;
+  transition: 1s ease;*/
   background-color: #3c8dbc;
 }
 
@@ -37,7 +38,6 @@
   position: absolute;
   font-size: small;
   text-align: center;
-  left: 10%;
   top: 10%;
 
 }
@@ -83,6 +83,37 @@ color: #9EC6DE;
   cursor: pointer;
 }
 
+.reset-a, .reset-a:hover, .reset-a:visited, .reset-a:focus, .reset-a:active  {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
+  cursor: auto;
+}
+
+.ttooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.ttooltip .ttooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.ttooltip:hover .ttooltiptext {
+  visibility: visible;
+}
+
 /* Yosuf ElSaadany
 3/14/2019 1:47 pm
 Integration of Modal- Styling
@@ -125,12 +156,14 @@ p:only-child {
 
 #modalIcons:hover {
   color: #3c8dbc;
+  cursor: pointer;
+}
+
+#modalIcons {
+  float: right;
 }
 
 /*------------------------------- ACCORDION ELEMENTS--------------------------------*/
-i { 
-  float: right; 
-}
 
 .card-header {
   background-color: #3c8dbc;
@@ -165,3 +198,11 @@ i {
 #completed { background-color:green;}
 #inprogressdot { background-color:yellow;}
 #pending { background-color:red;}
+
+/*---------------------------- Modal for Approval Email ----------------------------*/
+
+/* Positioning of Modal as requested by Mahesh */
+#approval {
+  margin-left: 10%;
+  margin-top: 19%;
+}
